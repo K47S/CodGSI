@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Linq;
+using System.Net.Http;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Cod2GSI
 {
@@ -6,7 +12,13 @@ namespace Cod2GSI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var suh = new ScoreUpdateHandler();
+            suh.Start();
+
+            Console.Write("Press any key to exit... ");
+            Console.ReadKey();
+
         }
+
     }
 }
